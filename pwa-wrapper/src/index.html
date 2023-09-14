@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta http-equiv="Content-Security-Policy" content="connect-src https://*">
+
+    <title>WebAppWrapper</title>
+
+    <link rel="stylesheet" href="./css/window.css" />
+</head>
+
+<body class="">
+    <nav id="menu">
+        <ul></ul>
+    </nav>
+    
+    <main id="loading-screen" class="container">
+        <progress id="loading-progress" indeterminate></progress>
+        <span class="material-symbols-rounded">rotate_right</span>
+        <h2>Loading ...</h2>
+        <p>Have a little patience while we prepare everything for you!</p>
+    </main>
+
+    <main id="offline-screen" class="container">
+        <section id="user-offline">
+            <span class="material-symbols-rounded">signal_wifi_connected_no_internet_4</span>
+            <h2>Whoops!</h2>
+            <p>Looks like you don't have internet.<br>Check your connection and everything will be awesome.</p>
+        </section>
+        <section id="page-offline">
+            <span class="material-symbols-rounded">cloud_off</span>
+            <h2>We lost our Server!</h2>
+            <p>We searched all of our clouds but couldn't contact the server. Let's try again later.</p>
+            <div class="controls">
+                <button id="reload" class="outline">Try again</button>
+                <button id="contact" class="secondary outline">Contact us</button>
+            </div>
+        </section>
+    </main>
+
+    <main id="message-screen" class="container">Test</main>
+
+    <script src="./js/index.ts" type="module"></script>
+</body>
+
+</html>

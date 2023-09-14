@@ -1,0 +1,22 @@
+// https://github.com/vitejs/vite/blob/main/packages/create-vite/template-vanilla-ts/tsconfig.json
+{
+    "extends": "@tsconfig/strictest/tsconfig.json",
+    "compilerOptions": {
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "skipLibCheck": true,
+
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+
+        "pretty": true,
+
+    },
+    "include": [ "definitions.ts", "src/**/*" ],
+}

@@ -1,0 +1,19 @@
+
+/* hide message screen by default */
+body:not(.message) #message-screen {
+    display: none;
+}
+
+/* only show message screen if set */
+ /* #message-screen {
+    display: block;
+} */
+
+/* force hide message screen on connection issues */
+body:is(.user-offline, .page-offline) #message-screen {
+    display: none;
+}
+
+#message-screen {
+    text-align: center;
+}

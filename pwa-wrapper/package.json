@@ -1,0 +1,15 @@
+{
+    "name": "pwa-wrapper",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "vite build"
+    },
+    "dependencies": {
+        "@fontsource/noto-sans": "^5.0.9",
+        "@picocss/pico": "^1.5.10",
+        "material-symbols": "^0.11.0"
+    },
+    "devDependencies": {
+        "vite": "^2.9.13"
+    }
+}

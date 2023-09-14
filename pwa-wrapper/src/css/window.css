@@ -1,0 +1,78 @@
+@import '@fontsource/noto-sans';
+@import '@picocss/pico';
+@import 'material-symbols';
+
+@import './screens/loading.css';
+@import './screens/offline.css';
+@import './screens/message.css';
+
+:root {
+  --primary-rgb: 16, 149, 193;
+
+  --primary: rgb(var(--primary-rgb)) !important;
+  --primary-hover: rgba(var(--primary-rgb), 0.75) !important;
+  --primary-focus: rgba(var(--primary-rgb), 0.25) !important;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body:not(.menu) #menu,
+body:is(.page-offline, .user-offline) #menu {
+  display: none;
+}
+
+#menu {
+  position: absolute;
+  inset: 0;
+  bottom: auto;
+  height: 36px;
+
+  background-color: var(--menu-background);
+}
+
+body.menu #loading-screen #loading-progress {
+  top: 36px;
+}
+
+nav#menu ul:first-of-type {
+  margin-left: 5px;
+}
+
+nav#menu li {
+  padding: 0;
+  margin: 0;
+}
+
+#menu a,
+#menu p {
+  font-size: 12px;
+
+  height: 26px;
+  padding: 4px 6px;
+  margin: 5px 3px;
+}
+
+#menu a[role="button"] {
+  padding: 3px 6px;
+}
+
+#menu p {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#menu p.separator {
+  color: var(--muted-color);
+  margin-left: 0;
+  margin-right: 0;
+}

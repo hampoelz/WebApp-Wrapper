@@ -1,0 +1,44 @@
+/* hide loading screen on idling or on connection issues */
+body:is(.idle, .user-offline, .page-offline) #loading-screen {
+  display: none;
+}
+
+#loading-screen {
+  text-align: center;
+}
+
+#loading-screen p {
+  font-size: 20px;
+}
+
+#loading-screen h2 {
+  font-size: 40px;
+}
+
+#loading-screen span {
+  width: 100%;
+  font-size: 150px;
+  animation: pulse 2.5s ease-in-out infinite alternate;
+}
+
+#loading-screen #loading-progress {
+  position: absolute;
+  inset: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 0;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

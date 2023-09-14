@@ -1,0 +1,48 @@
+/* hide all offline screen by default */
+body:not(.page-offline, .user-offline) #offline-screen,
+body:not(.user-offline) #offline-screen #user-offline,
+body:not(.page-offline) #offline-screen #page-offline {
+    display: none;
+}
+
+/* show offline screen if set */
+/* :is(.user-offline, .page-offline) #offline-screen,
+.user-offline #offline-screen #user-offline,
+.page-offline #offline-screen #page-offline {
+    display: block;
+} */
+
+/* prefer user-offline screen if more than one is set and hide others */
+body.user-offline.page-offline #offline-screen #page-offline {
+    display: none;
+}
+
+#offline-screen {
+    text-align: center;
+}
+
+#offline-screen span {
+    font-size: 150px;
+}
+
+#offline-screen h1 {
+    font-size: 50px;
+}
+
+#offline-screen p {
+    font-size: 20px;
+}
+
+#offline-screen .controls {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1em 2em;
+}
+
+#offline-screen .controls button {
+    font-size: 20px;
+    padding: 10px 20px;
+    max-width: 200px;
+}

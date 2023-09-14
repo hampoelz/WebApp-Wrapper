@@ -1,0 +1,10 @@
+{
+  "appId": "com.company.app",
+  "appName": "Company App",
+  "appUrl": "https://app.company.com/",
+  "primaryColor": "#1b66c9",
+  "menuColor": "#202124",
+  "menu": [],
+  "contactUrl": "",
+  "webDir": "dist"
+}
